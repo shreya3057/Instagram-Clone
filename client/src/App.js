@@ -7,16 +7,32 @@ import Signin from './components/screens/SignIn'
 import Profile from './components/screens/Profile'
 import Signup from './components/screens/Signup'
 import CreatePost from './components/screens/CreatePost'
-// import {reducer,initialState} from './reducers/userReducer'
+import {reducer,initialState} from './reducers/userReducer'
 // import UserProfile from './components/screens/UserProfile'
 // import SubscribedUserPosts from './components/screens/SubscribesUserPosts'
 // import Reset from './components/screens/Reset'
 // import NewPassword from './components/screens/Newpassword'
 
-function App(){
+export const UserContext = createContext()
+
+
+
+
+const Routing = ()=>{
+  const history = useHistory()
+  const {state,dispatch} = useContext(UserContext)
+  useEffect(()=>{
+    const user = JSON.parse(localStorage.getItem("user"))
+    if(user){
+      dispatch({type:"USER",payload:user})
+      //history.push('/')
+    }else{
+      if(!history.location.pathname.startsWith('/reset'))
+           history.push('/signin')
+    }
+  },[])
   return(
-    <BrowserRouter>
-      <NavBar />
+    <Switch>
       <Route exact path="/" >
       <Home />
       </Route>
@@ -32,7 +48,23 @@ function App(){
       <Route path="/create">
         <CreatePost/>
       </Route>
+      
+      
+    </Switch>
+  )
+}
+
+function App() {
+  const [state,dispatch] = useReducer(reducer,initialState)
+  return (
+    <UserContext.Provider value={{state,dispatch}}>
+    <BrowserRouter>
+      <NavBar />
+      <Routing />
+      
     </BrowserRouter>
+    </UserContext.Provider>
   );
 }
+
 export default App;

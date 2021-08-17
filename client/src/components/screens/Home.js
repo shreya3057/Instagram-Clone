@@ -1,25 +1,43 @@
-import React from 'react';  
+import React,{useState,useEffect,useContext} from 'react'
+import {UserContext} from '../../App'
+import {Link} from 'react-router-dom' 
 
-const Home =()=>{
+    const Home  = ()=>{
+        const [data,setData] = useState([])
+        //const {state,dispatch} = useContext(UserContext)
+        useEffect(()=>{
+           fetch('/allpost',{
+               headers:{
+                   "Authorization":"Bearer "+localStorage.getItem("jwt")
+               }
+           }).then(res=>res.json())
+           .then(result=>{
+               console.log(result)
+               setData(result.posts)
+           })
+        },[])
     return(
+
         <div className="home">
-            <div className="card home-card">
-                <h5>Shreya</h5>
-                <div className="card home-card">
-                    <div className="card-image">
-                        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Zmxvd2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"/>
+            {
+            data.map(item=>{
+                   return(
+                            <div className="card home-card" key={item._id}>
+                                <h5>{item.postedBy.name}</h5>
+                                <div className="card-image">
+                                    <img src={item.photo}/>
+                                </div>
+                                    <div className="card-content">
+                                    <i className="material-icons" style={{color:"red"}}>favorite</i>
+                                    <h6>{item.title}</h6>
+                                    <p>{item.body}</p>
+                                        <input type="text" placeholder="add a comment" />
+                                    </div>
 
-                    </div>
-                    <div className="card-content">
-                    <i className="material-icons" style={{color:"red"}}>favorite</i>
-                        <h6>Title</h6>
-                        <p>This is amazing pic</p>
-                        <input type="text" placeholder="add a comment" />
-                    </div>
-
-                </div>
-
-            </div>
+                                </div>
+                        )
+                    })
+            }
 
         </div>
     )
