@@ -8,7 +8,7 @@ import Profile from './components/screens/Profile'
 import Signup from './components/screens/Signup'
 import CreatePost from './components/screens/CreatePost'
 import {reducer,initialState} from './reducers/userReducer'
-// import UserProfile from './components/screens/UserProfile'
+ import UserProfile from './components/screens/UserProfile'
 // import SubscribedUserPosts from './components/screens/SubscribesUserPosts'
 // import Reset from './components/screens/Reset'
 // import NewPassword from './components/screens/Newpassword'
@@ -47,6 +47,9 @@ const Routing = ()=>{
       </Route>
       <Route path="/create">
         <CreatePost/>
+      </Route>
+      <Route path="/profile/:userid">
+        <UserProfile />
       </Route>
       
       
