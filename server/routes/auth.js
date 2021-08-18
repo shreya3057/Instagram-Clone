@@ -8,8 +8,8 @@ const {JWT_SECRET} = require('../keys')
 const requireLogin = require('../middleware/requireLogin')
 
 router.post('/signup',(req,res)=>{
-    const {name,email,password} = req.body 
-    if(!email || !password || !name){
+    const {name,email,password,pic} = req.body 
+    if(!email || !password || !name ){
        return res.status(422).json({error:"please add all the fields"})
     }
     User.findOne({email:email})
@@ -22,7 +22,8 @@ router.post('/signup',(req,res)=>{
               const user = new User({
                   email,
                   password:hashedpassword,
-                  name
+                  name,
+                  pic
               })
       
               user.save()
@@ -61,8 +62,8 @@ router.post('/signup',(req,res)=>{
             if(doMatch){
                // res.json({message:"successfully signed in"})
                 const token = jwt.sign({_id:savedUser._id},JWT_SECRET)
-                const {_id,name,email} = savedUser
-                res.json({token,user:{_id,name,email}})
+                const {_id,name,email,followers,following,pic} = savedUser
+                res.json({token,user:{_id,name,email,followers,following,pic}})
             //res.json({token})
             }
             else{

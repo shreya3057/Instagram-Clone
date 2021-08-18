@@ -16,6 +16,7 @@ import M from 'materialize-css'
            return [
             <li ><Link to="/profile">Profile</Link></li>,
             <li><Link to="/create">Create Post</Link></li>,
+            <li><Link to="/myfollowerspost">My Following Post</Link></li>,
             <li >
              <button className="btn #c62828 red darken-3"
             onClick={()=>{
