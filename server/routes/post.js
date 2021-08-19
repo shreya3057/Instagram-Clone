@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const requireLogin  = require('../middleware/requireLogin')
 const Post =  mongoose.model("Post")
 
+
 router.get('/allpost',requireLogin,(req,res)=>{
     Post.find()
     .populate("postedBy","_id name")
@@ -31,7 +32,6 @@ router.get('/getsubpost',requireLogin,(req,res)=>{
         console.log(err)
     })
 })
-
 
 router.post('/createpost',requireLogin,(req,res)=>{
     const {title,body,pic} = req.body 
@@ -63,6 +63,7 @@ router.get('/mypost',requireLogin,(req,res)=>{
         console.log(err)
     })
 })
+
 router.put('/like',requireLogin,(req,res)=>{
     Post.findByIdAndUpdate(req.body.postId,{
         $push:{likes:req.user._id}
@@ -100,7 +101,7 @@ router.put('/comment',requireLogin,(req,res)=>{
         new:true
     })
     .populate("comments.postedBy","_id name")
-    .populate("postedBy","_id name")
+    //.populate("postedBy","_id name")
     .exec((err,result)=>{
         if(err){
             return res.status(422).json({error:err})

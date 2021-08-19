@@ -5,6 +5,7 @@ const requireLogin  = require('../middleware/requireLogin')
 const Post =  mongoose.model("Post")
 const User = mongoose.model("User")
 
+
 router.get('/user/:id',requireLogin,(req,res)=>{
     User.findOne({_id:req.params.id})
     .select("-password")
@@ -21,6 +22,7 @@ router.get('/user/:id',requireLogin,(req,res)=>{
         return res.status(404).json({error:"User not found"})
     })
 })
+
 
 router.put('/follow',requireLogin,(req,res)=>{
     User.findByIdAndUpdate(req.body.followId,{
@@ -65,6 +67,7 @@ router.put('/unfollow',requireLogin,(req,res)=>{
     )
 })
 
+
 router.put('/updatepic',requireLogin,(req,res)=>{
     User.findByIdAndUpdate(req.user._id,{$set:{pic:req.body.pic}},{new:true},
         (err,result)=>{
@@ -75,6 +78,19 @@ router.put('/updatepic',requireLogin,(req,res)=>{
     })
 })
 
+
+
+router.post('/search-users',(req,res)=>{
+    let userPattern = new RegExp("^"+req.body.query)
+    User.find({email:{$regex:userPattern}})
+    .select("_id email")
+    .then(user=>{
+        res.json({user})
+    }).catch(err=>{
+        console.log(err)
+    })
+
+})
 
 
 

@@ -7,6 +7,14 @@ const jwt = require('jsonwebtoken')
 const {JWT_SECRET} = require('../keys')
 const requireLogin = require('../middleware/requireLogin')
 
+
+//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
+// const transporter = nodemailer.createTransport(sendgridTransport({
+//     auth:{
+//         api_key:"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"
+//     }
+// }))
+
 router.post('/signup',(req,res)=>{
     const {name,email,password,pic} = req.body 
     if(!email || !password || !name ){
@@ -28,12 +36,12 @@ router.post('/signup',(req,res)=>{
       
               user.save()
               .then(user=>{
-                  // transporter.sendMail({
-                  //     to:user.email,
-                  //     from:"no-reply@insta.com",
-                  //     subject:"signup success",
-                  //     html:"<h1>welcome to instagram</h1>"
-                  // })
+                  transporter.sendMail({
+                      to:user.email,
+                      from:"no-reply@insta.com",
+                      subject:"signup success",
+                      html:"<h1>welcome to instagram</h1>"
+                  })
                   res.json({message:"saved successfully"})
               })
               .catch(err=>{

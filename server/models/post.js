@@ -19,9 +19,8 @@ const postSchema = new mongoose.Schema({
         postedBy:{type:ObjectId,ref:"User"}
     }],
     postedBy:{
-        type:ObjectId,
-        ref:"User"
-     }
-     
-})
-mongoose.model("Post",postSchema)
+       type:ObjectId,
+       ref:"User"
+    }
+},{timestamps:true})
+ mongoose.model("Post", postSchema);
