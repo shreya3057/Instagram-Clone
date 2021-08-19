@@ -13,7 +13,17 @@
 11. View Followed User's Uploaded Pic
 
 
-
+Tech Stack-
+  React Js
+  Node Js
+  Express Js
+  MongoDB
+  Context API
+  React Router Dom
+  Bootstrap
+  Material UI
+  Material UI Icons
+  Cloudinary
 
 
 
