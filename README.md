@@ -26,13 +26,5 @@ Tech Stack-
   10-Cloudinary
 
 
+![3 jpg](https://user-images.githubusercontent.com/71556166/130117630-dff01bea-4de8-4099-a6a5-3e9c1aa91f53.png)
 
-
-
-
-
-
-
-
-![1 jpg](https://user-images.githubusercontent.com/71556166/130117409-647ac63c-65f7-49bc-a15e-7401a5b4938b.png)
-![2 jpg](https://user-images.githubusercontent.com/71556166/130117420-c230e009-3e27-46d8-b8ae-9b3be98e487d.png)
