@@ -25,6 +25,3 @@ Tech Stack-
   9-Material UI Icons
   10-Cloudinary
 
-
-![3 jpg](https://user-images.githubusercontent.com/71556166/130117630-dff01bea-4de8-4099-a6a5-3e9c1aa91f53.png)
-
