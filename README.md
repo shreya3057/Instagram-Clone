@@ -1,3 +1,4 @@
+
 # Instagram-Clone
  It is an Instagram web app clone using MERN Stack ( MongoDB , Express.js , React.js , Node.js ) with the properties of (Both frontend and backend):
 1. User Signup 
@@ -26,3 +27,5 @@ Tech Stack-
   10-Cloudinary
 
 
+![1](https://user-images.githubusercontent.com/71556166/130275047-a73791f0-27fd-4911-ab79-ac56497cc0eb.png)
+![2](https://user-images.githubusercontent.com/71556166/130275049-02c148bd-c600-4a5c-8f1a-aae6727e4e9c.png)
