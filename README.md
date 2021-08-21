@@ -1,3 +1,4 @@
+![2](https://user-images.githubusercontent.com/71556166/130323006-c9396419-ba47-41a7-803c-78ce528fff6c.png)
 
 
 # Instagram-Clone
