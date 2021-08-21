@@ -33,7 +33,7 @@ Tech Stack-
 ![2](https://user-images.githubusercontent.com/71556166/130322738-780afcb9-60de-4561-9486-b0e912b81dd8.png)
 ![2](https://user-images.githubusercontent.com/71556166/130322850-652447a0-2649-421b-b57e-886fe837f1d5.png)
 ![2](https://user-images.githubusercontent.com/71556166/130322919-fc7cffc9-cb32-4d05-978e-9334c4390b15.png)
-![image](https://user-images.githubusercontent.com/71556166/130322942-91d6d966-d382-44cd-8b62-0dad27efc201.png)
+![2](https://user-images.githubusercontent.com/71556166/130322971-cab62d3c-e32e-4018-9502-1d86bca8f032.png)
 
 
 
