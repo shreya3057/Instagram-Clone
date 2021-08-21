@@ -1,4 +1,3 @@
-![2](https://user-images.githubusercontent.com/71556166/130323006-c9396419-ba47-41a7-803c-78ce528fff6c.png)
 
 
 # Instagram-Clone
@@ -35,6 +34,8 @@ Tech Stack-
 ![2](https://user-images.githubusercontent.com/71556166/130322850-652447a0-2649-421b-b57e-886fe837f1d5.png)
 ![2](https://user-images.githubusercontent.com/71556166/130322919-fc7cffc9-cb32-4d05-978e-9334c4390b15.png)
 ![2](https://user-images.githubusercontent.com/71556166/130322971-cab62d3c-e32e-4018-9502-1d86bca8f032.png)
+![2](https://user-images.githubusercontent.com/71556166/130323006-c9396419-ba47-41a7-803c-78ce528fff6c.png)
+
 
 
 
