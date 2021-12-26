@@ -2,18 +2,17 @@
 
 # Instagram-Clone
  It is an Instagram web app clone using MERN Stack ( MongoDB , Express.js , React.js , Node.js ) with the properties of (Both frontend and backend):
-1. User Signup 
-2. User Signin.
-3. upload pic while signup
-4. Add Post.
-5. Follow other user
-6.  Unfollow other user.
-7. Like and Unlike posts.
-8. Comment on posts.
-9. Delete posts
-10. search other users
-11. Update profile pic
-12. View Followed User's Uploaded Pic
+1. Signup Page 
+2. Signin Page 
+3. Upload pic while signup
+4. Add Post
+5. Follow And  Unfollow Feature
+6. Like and Unlike Posts Feature
+7. Comment on Posts
+8. Delete Posts
+9. Search other users Id
+10. Update Profile Pic
+11. View Followed User's Uploaded Pic
 
 
 Tech Stack-
